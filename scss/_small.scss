@@ -1,0 +1,141 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/* body rules */
+body {
+    font-family: $fontFamily;
+    font-weight: $regularWeight;
+    font-size: 16px;
+}
+
+
+
+
+
+div#header {
+header {
+    padding: 1rem $gutter;
+    display: grid;
+    grid-template-columns: 130px auto;
+}
+
+    img {
+        padding: 1rem;
+    }
+
+
+    h1 {
+        margin: 1rem;
+        margin-top: .5rem;
+        padding-top: 1.5rem;
+        font-size: 1.5rem;
+        font-weight: $heavyWeight;
+    } // END OF H1
+
+    h2 {
+       margin: 1rem; 
+       font-size: 1.2rem; 
+       font-weight: $regularWeight;
+     } //END OF H2
+
+}      //END OF HEADER
+
+
+
+
+
+div#nav {
+    background-color: lighten($menuColor, 1%);
+}
+nav {
+
+        ul {
+        margin:0;
+        padding: 0;
+        }
+
+        li {
+        list-style-type: none;
+        }
+
+        ul li a {
+        text-align: right;
+        display: block;
+        padding: 1rem 1rem; /*44px min*/
+        color: white;
+        text-decoration: none;
+        }
+
+        ul li a:hover {
+        text-decoration: underline 2px darken($menuColor, 50%);
+        }
+
+        ul li.active a {
+        background-color: #333;
+        }
+
+} // END OF NAV
+
+
+
+
+
+
+
+// MAIN
+div#main {display: block;}
+main {
+
+    h1 {
+        color: $secondaryColor;
+        font-weight: $heavyWeight;
+        padding-left: 2vw;
+    }
+
+    .fruitstand {
+        display: flex;
+        flex-wrap: wrap;
+
+        figure {
+            flex-basis: 45%;
+            margin: 1rem 2%;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+
+
+    figcaption {
+        text-align: center;
+    }
+}
+
+
+// END OF MAIN
+
+
+
+
+div#footer {background-color: $menuColor;}
+footer {
+    text-align: center;
+    padding: 1rem $gutter;
+}
+
+
+
+
+
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
